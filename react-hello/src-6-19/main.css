@@ -1,0 +1,17 @@
+body{
+	margin: 0;
+	background-color: deeppink;
+}
+
+.test{
+	font-size: 56px;
+	text-align: center;
+}
+
+.box{
+	/*background-image: url(./images/a.jpg);
+	min-height: 400px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: 50% 50%;*/
+}
