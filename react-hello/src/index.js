@@ -2,6 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 // import App from './App'
-import Shop from './Shop'
+// import Shop from './Shop'
+// import Eat from './Eat'
+// import Random from './Random'
+import Tabs from './Tabs'
 
-ReactDOM.render(<Shop />, document.getElementById('root'))
+import './main.css'
+
+ReactDOM.render(<Tabs />, document.getElementById('root'))
