@@ -4,8 +4,8 @@ class Tabs extends React.Component{
 	constructor(){
 		super()
 		this.state={
-			tabs: 3,
-			show: 0
+			tabs: 3, // 选项卡的个数
+			show: 0 // 当前展示的第几个选项卡
 		}
 	}
 	change(num){
@@ -23,7 +23,7 @@ class Tabs extends React.Component{
 				width: this.state.tabs*100+'%',
 				overflow: 'hidden',
 				marginLeft: this.state.show*100*(-1)+'%',
-				transition: 'all 0.5s'
+				transition: 'all 0.5s ease'
 			},
 			tab: {
 				width: 100/this.state.tabs+'%',
