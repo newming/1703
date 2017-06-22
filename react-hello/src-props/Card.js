@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 class Card extends React.Component{
+	handleClick(){
+		this.props.xxx('123')
+	}
 	render(){
 		let styles = {
 			root: {
@@ -10,10 +13,11 @@ class Card extends React.Component{
 				borderRadius: '5px'
 			}
 		}
+		console.log(this.props)
 		return(
 			<div style={Object.assign({}, styles.root, this.props.style)}>
 				<div  style={{overflow: 'hidden', padding: '10px', borderBottom: '1px solid #ccc'}}>
-					<h3 style={{float: 'left', margin: '0'}}>{this.props.title}</h3>
+					<h3 style={{float: 'left', margin: '0'}} onClick={this.handleClick.bind(this)}>{this.props.title}</h3>
 					<div style={{float: 'right', fontSize: '16px'}}>{this.props.extra}</div>
 				</div>
 				<div style={{padding: '10px'}}>
