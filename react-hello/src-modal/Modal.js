@@ -12,6 +12,12 @@ class Modal extends React.Component{
 		// console.log(nextProps)
 		this.setState({visible: nextProps.visible})
 	}
+	handleClose(event){
+		// console.log(event.target, event.currentTarget)
+		if (event.target === event.currentTarget) {
+			this.props.onCancle && this.props.onCancle()
+		}
+	} 
 	render(){
 		let styles = {
 			root: {
@@ -19,12 +25,13 @@ class Modal extends React.Component{
 			}
 		}
 		let {title, cancelText, okText, children, onOk, onCancle} = this.props;
+		// console.log('state===',this.state.visible, 'props===',this.props.visible)
 		return(
-			<div className='modal-wrap' style={styles.root}>
+			<div className='modal-wrap' style={styles.root} onClick={this.handleClose.bind(this)}>
 				<div className='modal-card'>
 					<div className='modal-header'>
 						<h3>{title}</h3>
-						<span onClick={()=>this.setState({visible: false})}>关闭</span>
+						<span onClick={()=>{onCancle && onCancle()}}>关闭</span>
 					</div>
 
 					<div className='modal-body'>{children}</div>

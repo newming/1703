@@ -27,7 +27,7 @@ class App extends React.Component{
 					<input type="text" name='password'/>
 				</Modal>
 
-				<Modal visible={this.state.signup} title='注册'>
+				<Modal visible={this.state.signup} title='注册' onCancle={()=>this.setState({signup: false})}>
 					<label htmlFor="username">用户名：</label>
 					<input type="text" name='username'/>
 					<label htmlFor="password">密码：</label>
