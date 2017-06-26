@@ -16,7 +16,17 @@
 	margin-top: 20vh;
 	border-radius: 10px;
 	background-color: #fff;
+	/*animation:mymove 0.5s;*/
 }
+/*@keyframes mymove {
+	from {
+		transform:scale(0.8,0.8);
+	}
+	to {
+		transform:scale(1,1);
+	}
+}*/
+
 .modal-header{
 	color: #000;
 	border-bottom: 1px solid #ccc;
