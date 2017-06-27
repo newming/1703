@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import GrandFather from './GrandFather'
+import App from './App'
 
-ReactDOM.render(<GrandFather />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
