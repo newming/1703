@@ -10,7 +10,7 @@ class App extends React.Component{
 			sex: 'male',
 			edu: 'serior',
 			agree: false,
-			hobby: []
+			hobby: ['football', 'paiqiu']
 		}
 	}
 	handleSubmit(e){
@@ -67,8 +67,8 @@ class App extends React.Component{
 					<br />
 					兴趣爱好：
 					篮球<input type="checkbox" value='basketball' onChange={this.handleCheckbox.bind(this)}/>
-					足球<input type="checkbox" value='football' onChange={this.handleCheckbox.bind(this)}/>
-					排球<input type="checkbox" value='paiqiu' onChange={this.handleCheckbox.bind(this)}/>
+					足球<input type="checkbox" value='football' defaultChecked onChange={this.handleCheckbox.bind(this)}/>
+					排球<input type="checkbox" value='paiqiu' defaultChecked onChange={this.handleCheckbox.bind(this)}/>
 					台球<input type="checkbox" value='taiqiu' onChange={this.handleCheckbox.bind(this)}/>
 
 					<br />
