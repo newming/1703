@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<!-- JSON：JavaScript 对象表示法（JavaScript Object Notation）。
+JSON 是存储和交换文本信息的语法。类似 XML。
+JSON 比 XML 更小、更快，更易解析。 -->
+	<!-- <input type="text" placeholder="git user name" id='username'>
+	<button id='btn'>搜索</button>
+	<div id="playground"></div> -->
+
+<!-- <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+	// let obj = {
+	// 	name: 'newming',
+	// 	age: 56,
+	// }
+	// let arr = [
+	// 	{name: 'newming', age: 45646,},
+	// 	{name: 'newming', age: 45646,},
+	// ]
+	// let str = JSON.stringify(obj);
+	// console.log(str)
+
+	// let json = '{"name": "newming", "age": 546546}'
+	// let obj = JSON.parse(json)
+	// console.log(obj)
+
+	// var xml = new XMLHttpRequest();
+	// xml.onreadystatechange=function() {
+	// 	console.log(xml.readyState)
+	//   if (xml.readyState==4 && xml.status==200) {
+	//     console.log(xml.responseText)
+
+ //    }
+ //  }
+	// xml.open("POST", "https://cnodejs.org/api/v1/accesstoken", true) //GET POST
+	// xml.setRequestHeader("Content-type", "application/json")
+	// xml.send('{"accesstoken": "3f77acb1-d753-4393-b784-44913190e6a8"}');
+	// console.log('我先出来的')
+
+	// $('#btn').click(function () {
+	// 	var username = $('#username').val();
+
+	// 	$.ajax({
+	// 		url: 'https://api.github.com/users/'+username,
+
+	// 		success: function (data, status, xhr) {
+	// 			// console.log(data, status, xhr)
+	// 			var str = ''
+	// 			str += '<h3>用户名：' + data.login + '</h3><img src="' + data.avatar_url + '" /><p>粉丝数量：' + data.followers + '</p>';
+	// 			$('#playground').html(str)
+	// 		},
+
+	// 		error: function (xhr, status, error) {
+	// 			// console.log(xhr, status, error)
+	// 			alert('搜索失败：'+error)
+	// 		}
+
+	// 	})
+	// })
+
+	// $.ajax({
+	// 	method: 'POST',
+	// 	url: 'https://cnodejs.org/api/v1/accesstoken',
+	// 	data: '{"accesstoken": "3f77acb1-d753-4393-b784-44913190e6a8"}',
+	// 	contentType: 'application/json'
+	// }).done(function (data, status, xhr) {
+	// 	console.log(data)
+	// }).fail(function (xhr, status, error) {
+	// 	console.log(error)
+	// })
+
+	// var test = new Promise(function (resolve, reject) {
+	// 	// pending -> resolve
+	// 	// pending -> reject
+	// 	console.log('我在执行中')
+	// 	setTimeout(function () {
+	// 		console.log('我干不完了活了，也不知道花了多久时间')
+	// 		resolve({state: '我成功了'})
+	// 	}, 1000)
+	// })
+	// test.then(function (state) {
+	// 	console.log(state)
+	// 	return 123
+	// }).then(function (num) {
+	// 	console.log(num)
+	// })
+	// test.catch(function () {
+	// 	console.log('laji')
+	// })
+
+	// fetch
+	// fetch('https://api.github.com/users/newming')
+	// 	.then(function (data) {
+	// 		return data.json()
+	// 	}).then(function (json) {
+	// 		console.log(json)
+	// 	}).catch(function (err) {
+	// 		console.log(err)
+	// 	})
+
+	axios.get('https://api.github.com/users/newming')
+	  .then(res => console.log(res) )
+	  .catch(err => console.log(err) )
+
+</script>
+</body>
+</html>
