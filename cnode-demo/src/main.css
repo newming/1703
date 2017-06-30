@@ -1,0 +1,28 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.topic{
+	height: 40px;
+	padding: 5px;
+	line-height: 40px;
+	border-bottom: 1px solid #ccc;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.topic img{
+	height: 30px;
+	display: block;
+	float: left;
+}
+.topic-num{
+	margin-left: 5px;
+}
+.topic-tab{
+	margin: 0 5px;
+	background-color: lightgreen;
+	padding: 0 5px;
+	border-radius: 5px;
+}
