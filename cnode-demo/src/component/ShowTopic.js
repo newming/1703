@@ -15,6 +15,7 @@ class ShowTopic extends React.Component{
 	}
 	render(){
 		let {data} = this.state;
+		console.log(data)
 		return(
 			<div>
 				{
@@ -22,9 +23,7 @@ class ShowTopic extends React.Component{
 						<div>
 							<h3>{data.title}</h3>
 							<p>{data.author.loginname}——{data.visit_count}——{data.tab}</p>
-							<div>
-								{data.content}
-							</div>
+							<div dangerouslySetInnerHTML={{__html: data.content}} className='content' />
 						</div>
 					) : '数据加载中'
 				}
