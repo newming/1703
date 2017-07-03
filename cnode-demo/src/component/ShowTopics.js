@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class ShowTopic extends React.Component{
 	render(){
@@ -13,7 +14,9 @@ class ShowTopic extends React.Component{
 							<span className='topic-tab'>{
 								item.top ? '置顶' : 
 								item.good ? '精华' : tab[item.tab]}</span>
-							<span className='topic-title'>{item.title}</span>
+							<span className='topic-title'>
+								<Link to={`/topic/${item.id}`}>{item.title}</Link>
+							</span>
 						</div>
 					))
 				}
