@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form id='form'>
+		<label>姓名：</label><input type="text" id="username"><br />
+		<label>电话：</label><input type="number" id="phone"><br />
+		<label>Email：</label><input type="text" id="email"><br />
+		<button id='btn'>保存</button>
+	</form>
+	
+	<input type="text" id='search'><button id='searchBtn'>搜索</button>
+	<div id="info"></div>
+	<script>
+		btn.onclick = function (e) {
+			e.preventDefault()
+			let username = document.getElementById('username').value;
+			let phone = document.getElementById('phone').value;
+			let email = document.getElementById('email').value;
+			
+			let user = {username, phone, email};
+
+			let json = localStorage.users || "[]";
+			let users = JSON.parse(json)
+			users.push(user)
+			localStorage.users = JSON.stringify(users)
+			document.getElementById('form').reset()
+			// console.log(localStorage.users)
+		}
+
+		document.getElementById('searchBtn').onclick = function () {
+			// trim方法去掉字符串首尾的空格
+			let val = document.getElementById('search').value.trim();
+			if (val) {
+				// 获取localStorage的数据
+				let data = JSON.parse(localStorage.users || '[]')
+				// 通过 username 去 data数组里查找数据索引
+				let index = data.findIndex( item => item.username === val )
+				if (index===-1) {
+					alert('没有该用户')
+				}else{
+					let user = data[index];
+					document.getElementById('info').innerText = `姓名：${user.username} 电话：${user.phone} 邮箱：${user.email}`
+				}
+			}else{
+				alert('请输入姓名')
+			}
+		}
+	</script>
+</body>
+</html>
