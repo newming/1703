@@ -9,7 +9,9 @@ class ShowTopic extends React.Component{
 				{
 					this.props.data.map( item => (
 						<div key={item.id} className='topic'>
-							<img src={item.author.avatar_url} alt={item.author.loginname}/>
+							<Link to={`/user/${item.author.loginname}`}>
+								<img src={item.author.avatar_url} alt={item.author.loginname}/>
+							</Link>
 							<spsn className='topic-num'>{item.reply_count}/{item.visit_count}</spsn>
 							<span className='topic-tab'>{
 								item.top ? '置顶' : 
