@@ -20,7 +20,7 @@ class ShowTopic extends React.Component{
 			<div>
 				{
 					data ? (
-						<div>
+						<div className='show-topic'>
 							<h3>{data.title}</h3>
 							<p>{data.author.loginname}——{data.visit_count}——{data.tab}</p>
 							<div dangerouslySetInnerHTML={{__html: data.content}} className='content' />
