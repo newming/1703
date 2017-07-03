@@ -2,6 +2,7 @@ import React from 'react'
 import Home from './component/Home'
 import ShowTopic from './component/ShowTopic'
 import UserInfo from './component/UserInfo'
+import Header from './component/Header'
 import {BrowserRouter, Route} from 'react-router-dom'
 
 class App extends React.Component{
@@ -9,7 +10,7 @@ class App extends React.Component{
 		return(
 			<BrowserRouter>
 				<div>
-					<h1>cnode header</h1>
+					<Header />
 
 					<Route path='/' exact component={Home} />
 					<Route path='/topic/:id' component={ShowTopic} />
