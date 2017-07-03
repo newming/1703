@@ -4,9 +4,7 @@ import ShowTopic from './component/ShowTopic'
 import {BrowserRouter, Route} from 'react-router-dom'
 
 class App extends React.Component{
-	
 	render(){
-		
 		return(
 			<BrowserRouter>
 				<div>

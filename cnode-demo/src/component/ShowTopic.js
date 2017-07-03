@@ -24,6 +24,16 @@ class ShowTopic extends React.Component{
 							<h3>{data.title}</h3>
 							<p>{data.author.loginname}——{data.visit_count}——{data.tab}</p>
 							<div dangerouslySetInnerHTML={{__html: data.content}} className='content' />
+							<h3>全部评论：</h3>
+							{
+								data.replies.map( item =>(
+									<div key={item.id} className='comment'>
+										<img src={item.author.avatar_url} alt="avatar"/>
+										<span>{item.author.loginname}</span>
+										<div dangerouslySetInnerHTML={{__html: item.content}} className='content' />
+									</div>
+								))
+							}
 						</div>
 					) : '数据加载中'
 				}
