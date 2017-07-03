@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
+
 class ShowTopic extends React.Component{
 	constructor(){
 		super()
@@ -29,7 +31,7 @@ class ShowTopic extends React.Component{
 								data.replies.map( item =>(
 									<div key={item.id} className='comment'>
 										<img src={item.author.avatar_url} alt="avatar"/>
-										<span>{item.author.loginname}</span>
+										<Link to={`/user/${item.author.loginname}`}>{item.author.loginname}</Link>
 										<div dangerouslySetInnerHTML={{__html: item.content}} className='content' />
 									</div>
 								))
