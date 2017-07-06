@@ -4,7 +4,9 @@
   "description": "webpack-demo",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack"
+    "remove": "rimraf dist",
+    "build": "./node_modules/.bin/webpack --config webpack.prod.config.js",
+    "start": "./node_modules/.bin/webpack-dev-server --config webpack.dev.config.js"
   },
   "keywords": [
     "webpack"
@@ -24,9 +26,14 @@
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.4",
     "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
+    "open-browser-webpack-plugin": "0.0.5",
     "postcss-loader": "^2.0.6",
+    "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.5.0"
   }
 }
