@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0; padding: 0; box-sizing: border-box; }
+		.box{
+			background-color: #ccc;
+			display: flex;
+			height: 100vh;
+			flex-direction: column;
+		}
+		.mid{
+			flex-grow: 1;
+			overflow-y: auto;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.top{
+			flex-basis: 80px;
+			flex-shrink: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #00bcd4;
+			padding: 0 10px;
+		}
+		.bot{
+			flex-basis: 80px;
+			flex-shrink: 0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			background-color: #00bcd4;
+			padding: 0 10px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="box">
+		<div class="top">
+			<button>111</button>
+			<h3>hello</h3>
+			<button>000</button>
+		</div>
+		<div class="mid">
+			<div style='text-align: center;'>
+				<h1>hello</h1>
+				<p>hello</p>
+				<button>click</button>
+			</div>
+		</div>
+		<div class="bot">
+			<button>456</button>
+			<button>123</button>
+			<button>4564</button>
+			<button>4564</button>
+		</div>
+	</div>
+
+
+<!-- 
+	弹性容器的主轴默认是从左到右水平方向，从上到下竖直方向为副轴
+ -->
+</body>
+</html>
